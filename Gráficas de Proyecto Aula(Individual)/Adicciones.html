@@ -1,42 +1,134 @@
 <html>
 <head>
-<title>Gráficas de Adicciones</title>
+<title>Grï¿½ficas con JavaScript</title>
 <meta charset='utf-8'>
 <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous'>
-<link rel='stylesheet' type='text/css' href='morris.css'>  
+<link rel='stylesheet' type='text/css' href='morris.css'>	
 <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js'></script>
-<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js' integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM' crossorigin='anonymous'></script> 
-<script src='morris.min.js'></script>
+<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js' integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM' crossorigin='anonymous'></script>	
+<script src='Morris.js'></script>
 <script>    
 function grafica1(){
-  new Morris.Bar({
-  element: 'graph',
-  data: [{x:'CDMX', y:28, z:1},
-{x:'Puebla', y:27, z:2},
-{x:'Edo.Mexico', y:27, z:3},
-{x:'Guanajuato', y:23, z:4},
-{x:'Durango', y:24, z:5},
-{x:'Morelos', y:22, z:6},
-{x:'Zacatecas', y:22, z:7},
-{x:'San Luis Potosi', y:20, z:8},
-{x:'Sonora', y:20, z:9},
-{x:'Guerrero', y:20, z:10},
-{x:'Hidalgo', y:19, z:11},
+  
+  new Morris.Line({
 
-          ],
-  xkey: 'x',
-  ykeys: ['y'],
-  axes:false,
-  labels: ['Prevalencia:'],
-  resize:true,
-  lineColors:['#2CB4AC']
-  });
+    
+    element: 'graph',
+    data: [
+    {x:'CDMX', y:28, z:1},
+    {x:'Puebla', y:27, z:2},
+    {x:'Edo.Mexico', y:27, z:3},
+    {x:'Guanajuato', y:23, z:4},
+    {x:'Durango', y:24, z:5},
+    {x:'Morelos', y:22, z:6},
+    {x:'Zacatecas', y:22, z:7},
+    {x:'San Luis Potosi', y:20, z:8},
+    {x:'Sonora', y:20, z:9},
+    {x:'Guerrero', y:20, z:10},
+    {x:'Hidalgo', y:19, z:11},
+    {x:'Yucatan', y:18, z:12},
+    {x:'Sinaloa', y:18, z:13},
+    {x:'Tlaxcala', y:18, z:14},
+    {x:'Nuevo Leon', y:17, z:15},
+    {x:'Veracruz', y:17, z:16},
+    {x:'Chihuahua', y:17, z:17},
+    {x:'Jalisco', y:17, z:18},
+    {x:'Chiapas', y:17, z:19},
+    {x:'Michoacan', y:17, z:20},
+    {x:'Nayarit', y:17, z:21},
+    {x:'Quintana Roo', y:16, z:22},
+    {x:'Tabasco ', y:16, z:23},
+    {x:'Tamaulipas', y:16, z:24},
+    {x:'Baja California', y:16, z:25},
+    {x:'Aguascalientes', y:15, z:26},
+    {x:'Oaxaca', y:15, z:27},
+    {x:'Baja California Norte', y:14, z:28},
+    {x:'Campeche', y:13, z:29},
+    {x:'Colima', y:12, z:30},
+    {x:'Cualican', y:10, z:31},
+  
+            ],
+      xkey: 'x',
+      parseTime: false,
+      ykeys: ['y'],
+    labels: ['Cigarros'],
+    lineColors:['cyan']
+    });
+
 }
+
+function grafica2(){
+  new Morris.Bar({
+    element: 'graph',
+    data: [
+    {x:'1994', y:84.1, z:1},
+    {x:'1996', y:84.2, z:2},
+    {x:'1998', y:86.0, z:3},
+    {x:'2000', y:78.0, z:4},
+    {x:'2002', y:76.6, z:5},
+    {x:'2004', y:82.0, z:6},
+    {x:'2006', y:79.6, z:7},
+    {x:'2008', y:81.2, z:8},
+    {x:'2010', y:75.1, z:9},
+    {x:'2012', y:83.9, z:10},
+    {x:'2014', y:78.9, z:11},
+          ],
+    xkey: 'x',
+    ykeys: ['y'],
+    axes:false,
+    labels: ['Personas','Z'],
+    resize:true,
+    lineColors:['#2CB4AC']
+    }); 
+}
+
+
+function grafica3(){
+  new Morris.Donut({
+    element: 'graph',
+    data: [
+    {value:'134758', label:'Enfermedades cardï¿½acas'},
+    {value:'218634', label:'Accidente cerebrovascular'},
+    {value:'38495676', label:'Enfermedad pulmonar obstructiva crï¿½nica'},
+    {value:'895670', label:'Cï¿½ncer de pulmï¿½n'},
+    {value:'26170546', label:'Otros cï¿½nceres'},
+          ],
+          backgroundColor: '#ccc',
+          labelColor: '#060',
+          colors: [
+            '#0BA462',
+            '#39B580',
+            '#67C69D',
+            '#95D7BB'
+          ],
+          formatter: function (x) { return x + "%"}
+    }); 
+}
+
+
+
+
+
+
+
+
+
+
 </script>
 </head>
 <body>
+<h1>Graficas sobre Adicciones</h1>
+<h2>Da clic en el algun boton, plox xd</h2>
 <div id='graph'></div>
-<input type='button' value='grafica' onclick='grafica1()'>
+<div id='botones'>
+<input type='button' value='grafica 1' id="boton3" class="rainbow-button"  onclick='grafica1()'>
+<input type='button' value='grafica 2'  class="rainbow-button"  onclick='grafica2()'>
+<input type='button' value='grafica 3'  class="rainbow-button"  onclick='grafica3()'>
+<input type='button' value='grafica 4'  class="rainbow-button"  onclick='grafica1()'>
+<input type='button' value='grafica 5'  class="rainbow-button"  onclick='grafica1()'>
+<input type='button' value='grafica 5'  class="rainbow-button"  onclick='grafica1()'>
+<input type='button' value='Borrar Graficas'  class="rainbow-button"  onclick='grafica1()'>
+</div>
 </body>
 </html>
