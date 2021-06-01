@@ -23,7 +23,7 @@ body {
     background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
     color: aliceblue;
     border-radius:5px;
-    display:flex;
+    display:inline-block;
     align-items:center;
     justify-content:center;
     text-transform:uppercase;
@@ -63,4 +63,14 @@ body {
 
   .botones{
     display: inline;
+  }
+
+  h3{
+    color: #FFF;
+  }
+
+
+  p{
+    color: #FFF;
+    font-size: 18pt;
   }
