@@ -53,7 +53,7 @@ function grafica1(){
       parseTime: false,
       ykeys: ['y'],
     labels: ['Cigarros'],
-    lineColors:['white']
+    lineColors:['cyan']
     });
 
 
@@ -61,6 +61,221 @@ function grafica1(){
     document.getElementById('boton1').style.display='none';
 
 }
+
+function grafica2(){
+  new Morris.Bar({
+    element: 'graph2',
+    data: [
+    {x:'1994', y:84.1, z:1},
+    {x:'1996', y:84.2, z:2},
+    {x:'1998', y:86.0, z:3},
+    {x:'2000', y:78.0, z:4},
+    {x:'2002', y:76.6, z:5},
+    {x:'2004', y:82.0, z:6},
+    {x:'2006', y:79.6, z:7},
+    {x:'2008', y:81.2, z:8},
+    {x:'2010', y:75.1, z:9},
+    {x:'2012', y:83.9, z:10},
+    {x:'2014', y:78.9, z:11},
+          ],
+    xkey: 'x',
+    ykeys: ['y'],
+    labels: ['Personas','Z'],
+    resize:true,
+    barColors:['#2CB4AC']
+    }); 
+    document.getElementById('div2').style.display='';
+    document.getElementById('boton2').style.display='none';
+}
+
+
+function grafica3(){
+  new Morris.Donut({
+    element: 'graph3',
+    data: [
+    {value:'155746', label:'Hombres en actividades de prevencion'},
+    {value:'174557', label:'Mujeres en actividades de prevencion'},
+          ],
+          backgroundColor: '#ccc',
+          labelColor: '#060',
+          colors: [
+            '#1BB3F5',
+            '#6142EB',
+            '#FA0FD3',
+            '#5AE08D',
+            '#B2FA0F',
+          ],
+          formatter: function (x) { return x + ""}
+    });
+    document.getElementById('div3').style.display='';
+    document.getElementById('boton3').style.display='none';
+}
+
+function grafica4(){
+
+  Morris.Area({
+    element: 'graph4',
+    data: [
+    
+    {x:'1996', y:14635, z:15.26440261},
+    {x:'1997', y:15283, z:15.72250631},
+    {x:'1998', y:15366, z:15.60230882},
+    {x:'1999', y:16683, z:16.7321814},
+    {x:'2000', y:15915, z:15.77369748},    
+    {x:'2001', y:15944, z:15.61265344},   
+    {x:'2002', y:16851, z:16.29407755},    
+    {x:'2003', y:18117, z:17.30043818},  
+    {x:'2004', y:18806, z:87.74961917},  
+    {x:'2005', y:20253, z:18.90136156},  
+    {x:'2006', y:19182, z:17.69413112},   
+    {x:'2007', y:19710, z:17.9528818},
+    {x:'2008', y:20565, z:18.47725247},   
+    {x:'2009', y:21702, z:19.23039536},   
+    {x:'2010', y:23780, z:20.81299205},   
+    {x:'2011', y:22581, z:19.51974444},   
+    {x:'2012', y:22430, z:19.16213689},    
+    {x:'2013', y:24051, z:20.31419336},
+    ],
+    xkey: 'x',
+    ykeys: ['y', 'z'],
+    labels: ['Muertes por EPOC', 'Tasa de Mortalidad']
+
+  });
+
+  document.getElementById('div4').style.display='';
+  document.getElementById('boton4').style.display='none';
+
+
+}
+
+
+
+
+function grafica5(){
+
+    var day_data = [
+
+
+    {"elapsed":'1998', "value":13989},
+    {"elapsed":'1999', "value":17594},
+    {"elapsed":'2000', "value":18974},
+    {"elapsed":'2001', "value":21477},
+    {"elapsed":'2002', "value":24435},
+    {"elapsed":'2003', "value":27384},
+    {"elapsed":'2004', "value":31591},
+    {"elapsed":'2005', "value":35439},
+    {"elapsed":'2006', "value":37869},
+    {"elapsed":'2007', "value":40006},
+    {"elapsed":'2008', "value":43929},
+    {"elapsed":'2009', "value":45776},
+    {"elapsed":'2010', "value":50135},
+    {"elapsed":'2011', "value":49476},
+    {"elapsed":'2012', "value":53225},
+    {"elapsed":'2013', "value":55992},
+    
+
+
+  ];
+  Morris.Line({
+    element: 'graph5',
+    data: day_data,
+    xkey: 'elapsed',
+    ykeys: ['value'],
+    labels: ['Muertes por diabetes'],
+    parseTime: false
+  });
+
+  document.getElementById('div5').style.display='';
+  document.getElementById('boton5').style.display='none';
+}
+
+
+
+function grafica6(){
+
+  new Morris.Donut({
+    element: 'graph6',
+    data: [
+    {value:'1781', label:'Aguascalientes'},
+    {value:'4488', label:'Baja California'},
+    {value:'1011', label:'Baja California Sur'},
+    {value:'3807', label:'Campeche'},
+    {value:'8357', label:'Chiapas'},
+    {value:'17039', label:'Chihuahua'},
+    {value:'7168', label:'Coahuila'},
+    {value:'3451', label:'Colima'},
+    {value:'13075', label:'Distrito Federal'},
+    {value:'9008', label:'Durango'},
+    {value:'44141', label:'Estado de M�xico'},
+    {value:'40078', label:'Guanajuato'},
+    {value:'15171', label:'Guerrero'},
+    {value:'6177', label:'Hidalgo'},
+    {value:'26736', label:'Jalisco'},
+    {value:'2663', label:'Michoac�n de Ocampo'},
+    {value:'7252', label:'Morelos'},
+    {value:'3078', label:'Nayarit'},
+    {value:'17569', label:'Nuevo Le�n'},
+    {value:'4001', label:'Oaxaca'},
+    {value:'13237', label:'Puebla'},
+    {value:'4282', label:'Queretaro de Arteaga'},
+    {value:'1065', label:'Quintana Roo'},
+    {value:'12954', label:'San Luis Potos�'},
+    {value:'13145', label:'Sinaloa'},
+    {value:'12227', label:'Sonora'},
+    {value:'10174', label:'Tabasco'},
+    {value:'19820', label:'Tamaulipas'},
+    {value:'4143', label:'Tlaxcala'},
+    {value:'10383', label:'Veracruz Ignacio de la Llave'},
+    {value:'2058', label:'Yucat�n'},
+    {value:'5295', label:'Zacatecas'},
+          ],
+          backgroundColor: '#ccc',
+          labelColor: '#060',
+          colors: [
+          '#74d2e7',
+          '#009f4d',
+          '#efdf00',
+          '#fe5000',
+          '#e4002b',
+          '#da1884',
+          '#a51890',
+          '#0077c8',
+          '#8e43e7',
+          '#ff4f81',
+          '#00c4ff',
+          '#3be8b0',
+          '#a626aa',
+          '#ff6319',
+          '#f00a36',
+          '#FAE141',
+          '#2E82F0',
+          '#C61ED9',
+          '#1ED946',
+          '#D92C0B',
+          '#0BDBA3',
+          '#FC110D',
+          '#7273DB',
+          '#DB5133',
+          '#3be8b0',
+          '#2E82F0',
+          '#ff4f81',
+          '#e4002b',
+          '#efdf00',
+          '#00E4F0',
+          '#1ED946',
+          '#2E82F0',
+          '#0077c8',
+          '#74d2e7',
+
+          ],
+          formatter: function (x) { return x + ""}
+    });
+
+    document.getElementById('div6').style.display='';
+    document.getElementById('boton6').style.display='none';
+
+}
+
 
 
 
@@ -72,13 +287,41 @@ function grafica1(){
 <h3 texto1></h3>
 <div id='graph'>
   <div id="div1" style="display:none">
-    <p>Grafica sobre la prevalencia de consumo en 30 dias por Estado</p>
+    <p>Grafica sobre la prevalencia de consumo promedio de los 30 dias por Estado, o sea.Cuantos dias del mes fuman las personas</p>
   </div>
 </div>
-
+<div id='graph2'>
+  <div id="div2" style="display:none">
+    <p>Grafica sobre cada 1000 personas, cuantas son adictas al alcohol</p>
+  </div>
+</div>
+<div id='graph3'>
+  <div id="div3" style="display:none">
+    <p>Personas que participan en actividades para la prevencion de Adicciones</p>
+  </div>
+</div>
+<div id='graph4'>
+  <div id="div4" style="display:none">
+    <p>Personas muertas por una EPOC(Enfermedad pulmonar obstructiva crónica) Y respecto a la tasa de mortalidad(%)</p>
+  </div>
+</div>
+<div id='graph5'>
+  <div id="div5" style="display:none">
+    <p>Muertes por diabetes en los ultimos años, causadas por el consumo alto de azucar o una mala nutricion </p>
+  </div>
+</div>
+<div id='graph6'>
+  <div id="div6" style="display:none">
+    <p>Numero de pruebas de Tamizaje(Prueba sencilla en una población saludable, para identificar a aquellos individuos que tienen alguna patología, pero que todavía no presentan síntomas) realizadas en centros para la prevencion de adicciones hechas por estado</p>
+  </div>
+</div>
 <div id='botones'>
 <input type='button' style="display:'';" id='boton1' value='grafica 1'  class="rainbow-button"  onclick='grafica1()'>
-
+<input type='button' style="display:'';" id='boton2' value='grafica 2'  class="rainbow-button"  onclick='grafica2()'>
+<input type='button' style="display:'';" id='boton3' value='grafica 3'  class="rainbow-button"  onclick='grafica3()'>
+<input type='button' style="display:'';" id='boton4' value='grafica 4'  class="rainbow-button"  onclick='grafica4()'>
+<input type='button' style="display:'';" id='boton5' value='grafica 5'  class="rainbow-button"  onclick='grafica5()'>
+<input type='button' style="display:'';" id='boton6' value='grafica 6'  class="rainbow-button"  onclick='grafica6()'>
 </div>
 </body>
 </html>
